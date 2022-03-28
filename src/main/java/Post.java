@@ -2,6 +2,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Post {
 
+    private final String copyright;
     private final String date;
     private final String explanation;
     private final String hdurl;
@@ -11,6 +12,7 @@ public class Post {
     private final String url;
 
     public Post(
+            @JsonProperty("copyright") String copyright,
             @JsonProperty("date") String date,
             @JsonProperty("explanation") String explanation,
             @JsonProperty("hdurl") String hdurl,
@@ -19,6 +21,7 @@ public class Post {
             @JsonProperty("title") String title,
             @JsonProperty("url") String url
     ) {
+        this.copyright = copyright;
         this.date = date;
         this.explanation = explanation;
         this.hdurl = hdurl;
